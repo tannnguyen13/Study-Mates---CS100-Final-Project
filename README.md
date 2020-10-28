@@ -21,11 +21,28 @@
  > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
 
 ## Project Description
- > Your project description should summarize the project you are proposing. Be sure to include
- > * Why is it important or interesting to you?
+ > * General Description
+ >   * An app/extension that rewards you for each study session you complete with no distractions. Implements an egg hatching/pet system, where each time a user completes a study session, it knocks out an amount of time from the egg hatching timer. A default study session would be 25 min x 4 (with 5 min breaks in between). User can change how long each of the study/break intervals are. (Longer hatch times = more ‘rare’ monster egg)
+ >   * Negative reinforcement: stopping a study session early does not completely stop the egg from hatching and get rid of the user’s progress. Instead, they will only get a percentage removed from the egg hatching timer if they stop early. Ex: a warning will pop up asking them if they are sure they want to stop early, and will probably say something like, “You studied for 50 minutes! If you stop now, only 35 minutes (70%) will be removed from the hatching. Continue?”
+ >   * This encourages people to complete their study sessions but does not make it super ‘serious’ and tedious where people lose all their progress, as sometimes things come up and people get busy.
+ >   * You can also customize your monsters (adding hats, cute decorations, etc) without changing the overall functionality of the monster with the Decorator design pattern.
+ >   * End Goal: the user has the option to set an end goal for themselves. More specifically, the user can set a time interval to work towards. For example, the user can only focus 20 minutes at a time and wants to be able to focus for an hour. The user can input this information and create for themselves a schedule to abide by and a goal to work towards. Perhaps for completing this task, the user can be rewarded with more desirable monsters or points to redeem to customize said monster. 
+ > * Importance
+ >   * During times of COVID-19 and Zoom University, it is really hard to stay focused on school work when there are so many distractions available via our phones. The goal of this application is to put our own twist on time management apps by modifying them to be catered to our interests. We enjoy the nostalgia of having a virtual pet, like we used to as kids with “Neopets” and “Tamagotchi,” therefore we will have similar pet options for our reward system.  
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
  >   * [toolname](link) - Short description
- > * What will be the input/output of your project?
+ >   * C++, API (?), program to create graphics
+ > * Input/Output
+ >   * Input:
+ >      * Study Time
+ >      * Name for the pet
+ >      * Character option / which egg they want to hatch
+ >  * Output:
+ >      * Potential rewards
+ >      * Study/work intervals
+ >      * Timer counting down (?)
+ >      * Output message when user completes their study session + egg hatching animation(?)
+ > * Design Patterns
  >   * Behavioral Pattern: Strategy
  >     * The goal of the user is to improve their focusing abilities. The user can do this by being able to input information (current study time, end study time, etc) into the program for the program to output a plan for the user to get to their end goal. The end result is a unique schedule/plan that will differ to each user depending on their specifications. Abiding by this plan will work towards hatching/growing your monster and completing this plan could reward the user with points to redeem for cosmetic items for your monster. 
  >   * Creation Pattern: Abstract Factory
