@@ -25,7 +25,7 @@
  >      * Study Time
  >      * Name for the pet
  >      * Character option / which egg they want to hatch
- >  * Output:
+ >   * Output:
  >      * Potential rewards
  >      * Study/work intervals
  >      * Timer counting down (?)
