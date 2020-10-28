@@ -9,8 +9,12 @@
  > You will be forming a group of **THREE** students and work on an interesting project that you will propose yourself (in this `README.md` document). You can pick any project that you'd like, but it needs ot implement three design patterns. Each of the members in a group is expected to work on at least one design pattern and its test cases. You can, of course, help each other, but it needs to be clear who will be responsible for which pattern and for which general project features.
  
  > ## Expectations
- > * Incorporate **three** distinct design patterns, *two* of the design patterns need to be taught in this course:
- >   * Composite, Strategy, Abstract Factory, Visitor
+ > * Behavioral Pattern: Strategy
+ >   * The goal of the user is to improve their focusing abilities. The user can do this by being able to input information (current study time, end study time, etc) into the program for the program to output a plan for the user to get to their end goal. The end result is a unique schedule/plan that will differ to each user depending on their specifications. Abiding by this plan will work towards hatching/growing your monster and completing this plan could reward the user with points to redeem for cosmetic items for your monster. 
+ > * Creation Pattern: Abstract Factory
+ >   * All of the monsters / eggs in the app are pretty much the same, except for the fact that there in a sense is a ‘class’ system (Longer hatch times = rarer monster). We can use the same structure for all the various monsters, but change out some details. Examples of these details would be the rarity, what element the monster is, etc. With this design pattern, we are using the egg system as the main interface for the monsters, but we can split up the different interfaces into different categories such as rarity, element, etc. Fire types would be able to implement the FireType interface, and so on.
+ > * Structural Pattern: Decorator
+ >   * Each character stems from a “character” abstract class and we want to implement the ability to earn points to customize each character’s clothing. With the decorator design pattern, we will be able to create a decorator object (Customizer) under the Character class that will help us easily update the user’s character (monster) without affecting the appearance of the other characters. The Customizer object will be extended to different clothing types (hat, shirt, pants, etc). 
  > * All three design patterns need to be linked together (it can't be three distinct projects)
  > * Your project should be implemented in C/C++. If you wish to choose anoher programming language (e.g. Java, Python), please discuss with your lab TA to obtain permission.
  > * You can incorporate additional technologies/tools but they must be approved (in writing) by the instructor or the TA.
