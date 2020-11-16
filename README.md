@@ -42,7 +42,7 @@
  > ## Phase II
  <img src="project omt diagram-strategy.jpg">
  <img src="diagram 2-abstract.jpg">
- <img src="Decorator Diagram.pdf">
+ <img src="Decorator Diagram.jpg">
  
  > In addition to completing the "Class Diagram" section below, you will need to 
  > * Set up your GitHub project board as a Kanban board for the project. It should have columns that map roughly to 
