@@ -15,12 +15,12 @@
  >   * This encourages people to complete their study sessions but does not make it super ‘serious’ and tedious where people lose all their progress, as sometimes things come up and people get busy.
  >   * You can also customize your monsters (adding hats, cute decorations, etc) without changing the overall functionality of the monster with the Decorator design pattern.
  >   * End Goal: the user has the option to set an end goal for themselves. More specifically, the user can set a time interval to work towards. For example, the user can only focus 20 minutes at a time and wants to be able to focus for an hour. The user can input this information and create for themselves a schedule to abide by and a goal to work towards. Perhaps for completing this task, the user can be rewarded with more desirable monsters or points to redeem to customize said monster. 
-  **Importance**
+ * **Importance**
  >   * During times of COVID-19 and Zoom University, it is really hard to stay focused on school work when there are so many distractions available via our phones. The goal of this application is to put our own twist on time management apps by modifying them to be catered to our interests. We enjoy the nostalgia of having a virtual pet, like we used to as kids with “Neopets” and “Tamagotchi,” therefore we will have similar pet options for our reward system.  
- **What languages/tools/technologies do you plan to use? (This list may change over the course of the project)**
+ * **What languages/tools/technologies do you plan to use? (This list may change over the course of the project)**
  >   * [toolname](link) - Short description
  >   * C++, API (?), program to create graphics
-**Input/Output**
+* **Input/Output**
  >   * Input:
  >      * Study Time
  >      * Name for the pet
@@ -30,7 +30,7 @@
  >      * Study/work intervals
  >      * Timer counting down (?)
  >      * Output message when user completes their study session + egg hatching animation(?)
-**Design Patterns**
+* **Design Patterns**
  >   * *Behavioral Pattern:* Strategy
  >     * The goal of the user is to improve their focusing abilities. The user can do this by being able to input information (current study time, end study time, etc) into the program for the program to output a plan for the user to get to their end goal. The end result is a unique schedule/plan that will differ to each user depending on their specifications. Abiding by this plan will work towards hatching/growing your monster and completing this plan could reward the user with points to redeem for cosmetic items for your monster. 
  >   * *Creation Pattern:* Abstract Factory
