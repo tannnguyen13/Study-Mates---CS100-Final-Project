@@ -1,7 +1,7 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\<"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# \<Study Mates!\>
+# Study Mates!
  > Your author list below should include links to all members GitHub and should begin with a "\<" (remove existing author).
  
  > Authors: \<[Tann Nguyen](https://github.com/tannnguyen13)\> \<[Cindy Do](https://github.com/condoes)\> \<[Gabriela Alvarez](https://github.com/galva041)\>
@@ -9,7 +9,7 @@
  > You will be forming a group of **THREE** students and work on an interesting project that you will propose yourself (in this `README.md` document). You can pick any project that you'd like, but it needs ot implement three design patterns. Each of the members in a group is expected to work on at least one design pattern and its test cases. You can, of course, help each other, but it needs to be clear who will be responsible for which pattern and for which general project features.
 
 ## Project Description
- > * **General Description**
+  * **General Description**
  >   * An app/extension that rewards you for each study session you complete with no distractions. Implements an egg hatching/pet system, where each time a user completes a study session, it knocks out an amount of time from the egg hatching timer. A default study session would be 25 min x 4 (with 5 min breaks in between). User can change how long each of the study/break intervals are. (Longer hatch times = more ‘rare’ monster egg)
  >   * Negative reinforcement: stopping a study session early does not completely stop the egg from hatching and get rid of the user’s progress. Instead, they will only get a percentage removed from the egg hatching timer if they stop early. Ex: a warning will pop up asking them if they are sure they want to stop early, and will probably say something like, “You studied for 50 minutes! If you stop now, only 35 minutes (70%) will be removed from the hatching. Continue?”
  >   * This encourages people to complete their study sessions but does not make it super ‘serious’ and tedious where people lose all their progress, as sometimes things come up and people get busy.
