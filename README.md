@@ -19,7 +19,7 @@
  >   * During times of COVID-19 and Zoom University, it is really hard to stay focused on school work when there are so many distractions available via our phones. The goal of this application is to put our own twist on time management apps by modifying them to be catered to our interests. We enjoy the nostalgia of having a virtual pet, like we used to as kids with “Neopets” and “Tamagotchi,” therefore we will have similar pet options for our reward system.  
  * **What languages/tools/technologies do you plan to use? (This list may change over the course of the project)**
  >   * [toolname](link) - Short description
- >   * C++, API (?), program to create graphics
+ >   * Python, API (?), program to create graphics, Tkinter (GUI)
 * **Input/Output**
  >   * Input:
  >      * Study Time
