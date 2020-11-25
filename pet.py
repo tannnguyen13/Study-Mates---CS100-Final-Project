@@ -9,21 +9,34 @@ class Pet:
         self.pants = False
         self.hat = False
         self.shirt = False
-    def setPants(self):
+    #def setPants(self):
+    def customize(self, clothing):
+        if clothing == "pants":
+            if self.pants == True:
+                self.pants = False
+            else: 
+                self.pants = True
+        elif clothing == "shirt":
+            if self.shirt == True:
+                self.shirt = False
+            else: 
+                self.shirt = True
+        elif clothing == "hat":
+            if self.hat == True:
+                self.hat = False
+            else: 
+                self.hat = True
+        else:
+            print("Oops! The only clothing options are \"pants\", \"shirt\", or \"hat\"")
+    def getFit(self):
         if self.pants == True:
-            self.pants = False
-        else: 
-            self.pants = True
-    def setShirt(self):
+            print("pants", end = " ")
         if self.shirt == True:
-            self.shirt = False
-        else: 
-            self.shirt = True
-    def setHat(self):
+            print("shirt", end = " ")
         if self.hat == True:
-            self.hat = False
-        else: 
-            self.hat = True
+            print("hat", end = " ")
+        if self.pants == False and self.shirt == False and self.hat == False:
+            print("nothing lol", end = "")
     def changeName(self, new_name):
         self.name = new_name
     def getName(self):
@@ -35,7 +48,8 @@ class Pet:
         print(self.level, end = "") 
         print("! Nice to meet you <3\nMy exp is: ", end = "")
         print(self.exp)
-
+        print("I am wearing: ", end = "")
+        self.getFit()
 class Pet1(Pet):
     def __init__(self):
         self.name = "Gaby"
@@ -49,7 +63,8 @@ class Pet1(Pet):
         print(self.level, end = "") 
         print("! Happy to be here <3\nMy exp is: ", end = "")
         print(self.exp)
-
+        print("I am wearing: ", end = "")
+        self.getFit()
 class Pet2(Pet):
     def __init__(self):
         self.name = "Cindy"
@@ -63,7 +78,8 @@ class Pet2(Pet):
         print(self.level, end = "") 
         print("! Study hard! I need more friends <3\nMy exp is: ", end = "")
         print(self.exp)
-
+        print("I am wearing: ", end = "")
+        self.getFit()
 class Pet3(Pet):
     def __init__(self):
         self.name = "Tann"
@@ -78,17 +94,11 @@ class Pet3(Pet):
         print("! Excited to join the fun <3\nMy exp is: ", end = "")
         print(self.exp)
         print("I am wearing: ", end = "")
-        if self.pants == True:
-            print("pants!")
-        if self.shirt == True:
-            print("a shirt!")
-        if self.hat == True:
-            print("a hat!")
-        if self.pants == False and self.shirt == False and self.hat == False:
-            print("nothing lol")
-
+        self.getFit()
+        print()
 gaby = Pet3()
 gaby.petIntro()
-gaby.changeName("Teehee")
-gaby.gainExp()
+#gaby.changeName("Teehee")
+#gaby.gainExp()
+gaby.customize("pants")
 gaby.petIntro()
