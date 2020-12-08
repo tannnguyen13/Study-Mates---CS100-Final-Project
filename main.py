@@ -49,3 +49,5 @@ if __name__ == "__main__":
             me.petIntro()
         if menu_choice == "5":
             print("Goodbye!")
+        if menu_choice != ("1" or "2" or "3" or "4" or "5"):
+            print("\nInvalid Input! Pick a choice listed in the menu.\n")
