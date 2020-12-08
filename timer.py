@@ -16,10 +16,10 @@ class Timer:
     def run_timer(self):    
         sessionTime = input("Enter session time (in minutes): ")
 
-        if sessionTime == 0:
+        if sessionTime == '0':
             print("Invalid input! You can't study for 0 minutes! \n")
             return None
-            
+
         else:
             breakTime = 1
             totalStudyTime = 0
@@ -45,7 +45,10 @@ class Timer:
         return self.totalTime
 
     def print_total_time(self):
-        print(self.totalTime)
+        if self.totalTime < 60:
+            print(self.totalTime)
+        else:
+            print(self.hours, "hour(s) and", self.minutes, "minutes")
 
     def convert_hours(self):
         temp = self.totalTime
