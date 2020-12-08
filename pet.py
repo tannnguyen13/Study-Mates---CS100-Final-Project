@@ -6,6 +6,7 @@ class Pet:
         self.name = "Default"
         self.level = 0
         self.exp = 0
+        self.maxLevel = 0;
         self.pants = False
         self.hat = False
         self.shirt = False
@@ -36,69 +37,139 @@ class Pet:
         if self.hat == True:
             print("hat", end = " ")
         if self.pants == False and self.shirt == False and self.hat == False:
-            print("nothing lol", end = "")
+            print("nothing lol")
     def changeName(self, new_name):
         self.name = new_name
     def getName(self):
         return self.name
-    def gainExp(self):
-        self.exp = self.exp + 1
+    def gainExp(self, expAmount):
+        self.exp = self.exp + (expAmount)
     def petIntro(self):
-        print("Hello! I am the " + self.name + " study mate. :( I am a level ", end = "")
+        print("Hello! I am the " + self.name + " study mate. <3 I am a level ", end = "")
         print(self.level, end = "") 
         print("! Nice to meet you <3\nMy exp is: ", end = "")
         print(self.exp)
         print("I am wearing: ", end = "")
         self.getFit()
-class Pet1(Pet):
+        print()
+    def check_max_level(self):
+        if self.level >= self.maxLevel:
+            print("Congratulations! I have reached my max level!🙏🏼😇")
+            return True
+        else:
+            return False
+class firetype(Pet):
     def __init__(self):
+        super().__init__()
         self.name = "Gaby"
         self.level = 1
-        self.exp = 10
+        self.exp = 0
         self.pants = True
         self.hat = False
         self.shirt = False
+        self.maxLevel = 10
     def petIntro(self):
         print("Hello! My name is " + self.name + ". I am a level ", end = "")
         print(self.level, end = "") 
-        print("! Happy to be here <3\nMy exp is: ", end = "")
-        print(self.exp)
-        print("I am wearing: ", end = "")
-        self.getFit()
-class Pet2(Pet):
-    def __init__(self):
-        self.name = "Cindy"
-        self.level = 3
-        self.exp = 55
-        self.pants = False
-        self.hat = True
-        self.shirt = False
-    def petIntro(self):
-        print("Hello! My name is " + self.name + ". I am a level ", end = "")
-        print(self.level, end = "") 
-        print("! Study hard! I need more friends <3\nMy exp is: ", end = "")
-        print(self.exp)
-        print("I am wearing: ", end = "")
-        self.getFit()
-class Pet3(Pet):
-    def __init__(self):
-        self.name = "Tann"
-        self.level = 4
-        self.exp = 99
-        self.pants = False
-        self.hat = False
-        self.shirt = True
-    def petIntro(self):
-        print("Hello! My name is " + self.name + ". I am a level ", end = "")
-        print(self.level, end = "") 
-        print("! Excited to join the fun <3\nMy exp is: ", end = "")
+        print(" Fire type! Happy to be here <3\nMy exp is: ", end = "")
         print(self.exp)
         print("I am wearing: ", end = "")
         self.getFit()
         print()
-gaby = Pet3()
-gaby.petIntro()
+    def gainExp(self, expAmount):
+        self.exp = self.exp + (expAmount*2)
+    def check_level(self):
+        if self.check_max_level() == False:
+            i = self.exp
+            l = 0
+            while i > 0 and self.check_max_level() == False:
+                i = i - 100
+                l = l+1
+            self.level = self.level+(l-1)
+            self.exp = i+100 
+class watertype(Pet):
+    def __init__(self):
+        super().__init__()
+        self.name = "water"
+        self.level = 1
+        self.exp = 0
+        self.pants = False
+        self.hat = True
+        self.shirt = False
+        self.maxLevel = 8
+    def petIntro(self):
+        print("Hello! My name is " + self.name + ". I am a level ", end = "")
+        print(self.level, end = "") 
+        print("! I am a Water type! Study hard! I need more friends <3\nMy exp is: ", end = "")
+        print(self.exp)
+        print("I am wearing: ", end = "")
+        self.getFit()
+        print()
+    def gainExp(self, expAmount):
+        self.exp = self.exp + (expAmount*1.5)
+    def check_level(self):
+        while self.check_max_level() == False:
+            i = self.exp
+            l = 0
+            while i > 0 and self.check_max_level() == False:
+                i = i - 75
+                l = l+1
+            self.level = self.level+(l-1) 
+            self.exp = i+75
+            if self.check_max_level() == True:
+                self.level = self.maxLevel
+class grasstype(Pet):
+    def __init__(self):
+        super().__init__()
+        self.name = "Tann"
+        self.level = 1
+        self.exp = 0
+        self.pants = False
+        self.hat = False
+        self.shirt = True
+        self.maxLevel = 3
+    def petIntro(self):
+        print("Hello! My name is " + self.name + ". I am a level ", end = "")
+        print(self.level, end = "") 
+        print("! I am a GRASSTYPE! Excited to join the fun <3\nMy exp is: ", end = "")
+        print(self.exp)
+        print("I am wearing: ", end = "")
+        self.getFit()
+        print()
+    def gainExp(self, expAmount):
+        self.exp = self.exp + (expAmount*1.25)
+    def check_level(self):
+        if self.check_max_level() == False:
+            i = self.exp
+            l = 0
+            while i > 0:
+                i = i - 1
+                l = l+1
+            self.level = self.level+(l-1)
+            self.exp = i+1
+            if self.check_max_level() == True:
+                self.level = self.maxLevel
+#gaby = Pet3()
+#gaby.petIntro()
 #gaby.changeName("Teehee")
 #gaby.gainExp()
+def set_type(self, name):
+    if (name.lower() == "fire"):
+        # Pet.__init__(self, firetype)
+        return firetype()
+    if (name.lower() == "grass"):
+        # Pet.__init__(self, grasstype)
+        return grasstype()
+    if (name.lower() == "water"):
+        # Pet.__init__(self, watertype)
+        return watertype()
+
+"""
+gaby = Pet3()
+gaby.petIntro()
+gaby.changeName("Teehee")
+gaby.gainExp()
+>>>>>>> master
 gaby.customize("pants")
 gaby.petIntro()
+"""
