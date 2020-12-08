@@ -13,7 +13,7 @@ class Timer:
             sessionTime -= 1
     def run_timer(self):    
         sessionTime = input("Enter session time (in minutes): ")
-        self.timer(int(sessionTime))
+    
         breakTime = 1
         totalStudyTime = 0
         tempStudyTime = int(sessionTime)
