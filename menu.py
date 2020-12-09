@@ -6,6 +6,7 @@ def menu():
     print("     2: View Total Time Studied \n")
     print("     3: View Pet    \n")
     print("     4: Customize Pet    \n")
+    print("     5: Quit    \n")
     print("================================ \n")
 
 
