@@ -1,6 +1,8 @@
 # classes for pets: default, mine, cindy's, and tann's
 # currently only on terminal, need to figure out how to add visual for each
 # also need to discuss more specifics (exp, incrementing exp, clothing for each)
+
+
 class Pet:
     def __init__(self):
         self.name = "Default"
@@ -22,9 +24,6 @@ class Pet:
             print(self.level, end = "") 
             print("! Nice to meet you <3\nMy exp is: ", end = "")
             print(self.exp)
-            print("I am wearing: ", end = "")
-            #self.getFit()
-            print()
         else:
             petdata = open(filename, 'r')
             print(petdata.readline())
@@ -38,10 +37,10 @@ class Pet:
 class firetype(Pet):
     def __init__(self):
         super().__init__()
-        self.name = "Gaby"
+        self.name = "fire"
         self.level = 1
         self.exp = 0
-        self.pants = True
+        self.pants = False
         self.hat = False
         self.shirt = False
         self.maxLevel = 5
@@ -51,9 +50,6 @@ class firetype(Pet):
             print(self.level, end = "") 
             print(" Fire type! Happy to be here <3\nMy exp is: ", end = "")
             print(self.exp)
-            print("I am wearing: ", end = "")
-            #self.getFit()
-            print()
         else:
             petdata = open(filename, 'r')
             print(petdata.readline())
@@ -79,7 +75,7 @@ class watertype(Pet):
         self.level = 1
         self.exp = 0
         self.pants = False
-        self.hat = True
+        self.hat = False
         self.shirt = False
         self.maxLevel = 3
     def petIntro(self, filename = None):
@@ -88,9 +84,6 @@ class watertype(Pet):
             print(self.level, end = "") 
             print("! I am a Water type! Study hard! I need more friends <3\nMy exp is: ", end = "")
             print(self.exp)
-            print("I am wearing: ", end = "")
-            #self.getFit()
-            print()
         else:
             petdata = open(filename, 'r')
             print(petdata.readline())
@@ -111,7 +104,7 @@ class watertype(Pet):
 class grasstype(Pet):
     def __init__(self):
         super().__init__()
-        self.name = "Tann"
+        self.name = "grass"
         self.level = 1
         self.exp = 0
         self.pants = False
@@ -124,9 +117,6 @@ class grasstype(Pet):
             print(self.level, end = "") 
             print("! I am a GRASSTYPE! Excited to join the fun <3\nMy exp is: ", end = "")
             print(self.exp)
-            print("I am wearing: ", end = "")
-            #self.getFit()
-            print()
         else:
             petdata = open(filename, 'r')
             print(petdata.readline())
