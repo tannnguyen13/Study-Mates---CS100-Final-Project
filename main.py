@@ -49,6 +49,13 @@ if __name__ == "__main__":
 
             user1.write(str(me.level)+'\n')
             user1.write(str(me.exp)+'\n')
+
+            me.petIntro()
+            if me.check_max_level() == True:
+                print("Congratulations! I have reached my max level! 😇🙏🏼")
+
+            user1.write(str(me.level)+'\n')
+            user1.write(str(me.exp)+'\n')
         if menu_choice == "2":
             print("Total minutes studied (lifetime): ")
             print(total, "minutes \n")
@@ -59,3 +66,5 @@ if __name__ == "__main__":
             custom.customizer(me)"""
         if menu_choice == "5":
             print("Goodbye!")
+        elif menu_choice not in ("1" or "2" or "3" or "4" or "5"):
+            print("\nInvalid Input! Pick a choice listed in the menu.\n")
