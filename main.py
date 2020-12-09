@@ -9,7 +9,7 @@ from pet import *
 
 if __name__ == "__main__":
     user = open("user1.txt","r")
-    if user.readline() is not ""
+    if user.readline() is not "":
         user1 = open("user1.txt","a")
         total = 0
         menu_choice = "1"
@@ -37,11 +37,21 @@ if __name__ == "__main__":
             user1.write(name.lower()+'\n')
             user1.write(type.lower()+'\n')
             
-            time = Timer()
-            time.run_timer()
-            
-            total += time.return_total_time()
-            me.gainExp(time.return_total_time())
+            if type.lower() != ("fire" or "water" or "grass"):
+                print("\nInvalid Input! Please pick a type from the list.")
+                print("Going back to the main menu\n")
+            else:
+                me = set_type(me, type)
+                
+                name = input("What do you want to name your pet? \n")
+                me.changeName(name)
+                me.petIntro()
+                
+                time = Timer()
+                time.run_timer()
+                
+                total += time.return_total_time()
+                me.gainExp(time.return_total_time())
 
             me.petIntro()
             if me.check_max_level() == True:

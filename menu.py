@@ -9,4 +9,7 @@ def menu():
     print("     5: Quit    \n")
     print("================================ \n")
 
-
+def Welcome():
+    print("================================ \n")
+    print("     Welcome to Study Mates!   \n")
+    print("================================ \n")
