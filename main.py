@@ -40,7 +40,8 @@ if __name__ == "__main__":
             me.gainExp(time.return_total_time())
 
             me.petIntro()
-            me.check_level()
+            if me.check_max_level() == True:
+                print("Congratulations! I have reached my max level! 😇🙏🏼")
 
         if menu_choice == "2":
             print("Total minutes studied (lifetime): ")

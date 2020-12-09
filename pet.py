@@ -10,25 +10,6 @@ class Pet:
         self.pants = False
         self.hat = False
         self.shirt = False
-    #def setPants(self):
-    def customize(self, clothing):
-        if clothing == "pants":
-            if self.pants == True:
-                self.pants = False
-            else: 
-                self.pants = True
-        elif clothing == "shirt":
-            if self.shirt == True:
-                self.shirt = False
-            else: 
-                self.shirt = True
-        elif clothing == "hat":
-            if self.hat == True:
-                self.hat = False
-            else: 
-                self.hat = True
-        else:
-            print("Oops! The only clothing options are \"pants\", \"shirt\", or \"hat\"")
     def getFit(self):
         if self.pants == True:
             print("pants", end = " ")
@@ -54,7 +35,6 @@ class Pet:
         print()
     def check_max_level(self):
         if self.level >= self.maxLevel:
-            print("Congratulations! I have reached my max level!🙏🏼😇")
             return True
         else:
             return False
@@ -67,7 +47,7 @@ class firetype(Pet):
         self.pants = True
         self.hat = False
         self.shirt = False
-        self.maxLevel = 10
+        self.maxLevel = 5
     def petIntro(self):
         print("Hello! My name is " + self.name + ". I am a level ", end = "")
         print(self.level, end = "") 
@@ -77,16 +57,19 @@ class firetype(Pet):
         self.getFit()
         print()
     def gainExp(self, expAmount):
-        self.exp = self.exp + (expAmount*2)
+        self.exp = self.exp + (expAmount*5)
+        self.check_level()
     def check_level(self):
         if self.check_max_level() == False:
             i = self.exp
             l = 0
             while i > 0 and self.check_max_level() == False:
-                i = i - 100
+                i = i - 3
                 l = l+1
             self.level = self.level+(l-1)
-            self.exp = i+100 
+            self.exp = i+3 
+            if self.check_max_level() == True:
+                self.level = self.maxLevel
 class watertype(Pet):
     def __init__(self):
         super().__init__()
@@ -96,7 +79,7 @@ class watertype(Pet):
         self.pants = False
         self.hat = True
         self.shirt = False
-        self.maxLevel = 8
+        self.maxLevel = 3
     def petIntro(self):
         print("Hello! My name is " + self.name + ". I am a level ", end = "")
         print(self.level, end = "") 
@@ -106,16 +89,17 @@ class watertype(Pet):
         self.getFit()
         print()
     def gainExp(self, expAmount):
-        self.exp = self.exp + (expAmount*1.5)
+        self.exp = self.exp + (expAmount*2)
+        self.check_level()
     def check_level(self):
         while self.check_max_level() == False:
             i = self.exp
             l = 0
             while i > 0 and self.check_max_level() == False:
-                i = i - 75
+                i = i - 1
                 l = l+1
             self.level = self.level+(l-1) 
-            self.exp = i+75
+            self.exp = i+1
             if self.check_max_level() == True:
                 self.level = self.maxLevel
 class grasstype(Pet):
@@ -137,7 +121,8 @@ class grasstype(Pet):
         self.getFit()
         print()
     def gainExp(self, expAmount):
-        self.exp = self.exp + (expAmount*1.25)
+        self.exp = self.exp + (expAmount*1)
+        self.check_level()
     def check_level(self):
         if self.check_max_level() == False:
             i = self.exp
@@ -149,27 +134,11 @@ class grasstype(Pet):
             self.exp = i+1
             if self.check_max_level() == True:
                 self.level = self.maxLevel
-#gaby = Pet3()
-#gaby.petIntro()
-#gaby.changeName("Teehee")
-#gaby.gainExp()
+
 def set_type(self, name):
     if (name.lower() == "fire"):
-        # Pet.__init__(self, firetype)
         return firetype()
     if (name.lower() == "grass"):
-        # Pet.__init__(self, grasstype)
         return grasstype()
     if (name.lower() == "water"):
-        # Pet.__init__(self, watertype)
         return watertype()
-
-"""
-gaby = Pet3()
-gaby.petIntro()
-gaby.changeName("Teehee")
-gaby.gainExp()
->>>>>>> master
-gaby.customize("pants")
-gaby.petIntro()
-"""
