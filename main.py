@@ -30,7 +30,7 @@ if __name__ == "__main__":
             
             if type.lower() != ("fire" or "water" or "grass"):
                 print("\nInvalid Input! Please pick a type from the list.")
-                print("Going back to the main menu\n")
+                print("Going back to the main menu...\n")
             else:
                 me = set_type(me, type)
                 
@@ -46,20 +46,13 @@ if __name__ == "__main__":
 
                 user1.write(name.lower()+'\n')
                 user1.write(type.lower()+'\n')
+                
+                me.petIntro()
+                if me.check_max_level() == True:
+                    print("Congratulations! I have reached my max level! 😇🙏🏼")
 
-            me.petIntro()
-            if me.check_max_level() == True:
-                print("Congratulations! I have reached my max level! 😇🙏🏼")
-
-            user1.write(str(me.level)+'\n')
-            user1.write(str(me.exp)+'\n')
-
-            me.petIntro()
-            if me.check_max_level() == True:
-                print("Congratulations! I have reached my max level! 😇🙏🏼")
-
-            user1.write(str(me.level)+'\n')
-            user1.write(str(me.exp)+'\n')
+                user1.write(str(me.level)+'\n')
+                user1.write(str(me.exp)+'\n')
         if menu_choice == "2":
             print("Total minutes studied (lifetime): ")
             print(total, "minutes \n")
