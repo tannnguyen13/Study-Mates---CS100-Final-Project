@@ -6,38 +6,35 @@ class Pet:
         self.name = "Default"
         self.level = 0
         self.exp = 0
-        self.maxLevel = 0;
+        self.maxLevel = 0
         self.pants = False
         self.hat = False
         self.shirt = False
-    def getFit(self):
-        if self.pants == True:
-            print("pants", end = " ")
-        if self.shirt == True:
-            print("shirt", end = " ")
-        if self.hat == True:
-            print("hat", end = " ")
-        if self.pants == False and self.shirt == False and self.hat == False:
-            print("nothing lol")
     def changeName(self, new_name):
         self.name = new_name
     def getName(self):
         return self.name
     def gainExp(self, expAmount):
         self.exp = self.exp + (expAmount)
-    def petIntro(self):
-        print("Hello! I am the " + self.name + " study mate. <3 I am a level ", end = "")
-        print(self.level, end = "") 
-        print("! Nice to meet you <3\nMy exp is: ", end = "")
-        print(self.exp)
-        print("I am wearing: ", end = "")
-        self.getFit()
-        print()
+    def petIntro(self, filename = None):
+        if filename is None:
+            print("Hello! I am the " + self.name + " study mate. <3 I am a level ", end = "")
+            print(self.level, end = "") 
+            print("! Nice to meet you <3\nMy exp is: ", end = "")
+            print(self.exp)
+            print("I am wearing: ", end = "")
+            #self.getFit()
+            print()
+        else:
+            petdata = open(filename, 'r')
+            print(petdata.readline())
     def check_max_level(self):
         if self.level >= self.maxLevel:
             return True
         else:
             return False
+
+
 class firetype(Pet):
     def __init__(self):
         super().__init__()
@@ -48,14 +45,19 @@ class firetype(Pet):
         self.hat = False
         self.shirt = False
         self.maxLevel = 5
-    def petIntro(self):
-        print("Hello! My name is " + self.name + ". I am a level ", end = "")
-        print(self.level, end = "") 
-        print(" Fire type! Happy to be here <3\nMy exp is: ", end = "")
-        print(self.exp)
-        print("I am wearing: ", end = "")
-        self.getFit()
-        print()
+    def petIntro(self, filename=None): # can call function with or without filename
+        if filename is None: # does this if fileName was not passed in
+            print("Hello! My name is " + self.name + ". I am a level ", end = "")
+            print(self.level, end = "") 
+            print(" Fire type! Happy to be here <3\nMy exp is: ", end = "")
+            print(self.exp)
+            print("I am wearing: ", end = "")
+            #self.getFit()
+            print()
+        else:
+            petdata = open(filename, 'r')
+            print(petdata.readline())
+
     def gainExp(self, expAmount):
         self.exp = self.exp + (expAmount*5)
         self.check_level()
@@ -80,14 +82,18 @@ class watertype(Pet):
         self.hat = True
         self.shirt = False
         self.maxLevel = 3
-    def petIntro(self):
-        print("Hello! My name is " + self.name + ". I am a level ", end = "")
-        print(self.level, end = "") 
-        print("! I am a Water type! Study hard! I need more friends <3\nMy exp is: ", end = "")
-        print(self.exp)
-        print("I am wearing: ", end = "")
-        self.getFit()
-        print()
+    def petIntro(self, filename = None):
+        if filename is None:
+            print("Hello! My name is " + self.name + ". I am a level ", end = "")
+            print(self.level, end = "") 
+            print("! I am a Water type! Study hard! I need more friends <3\nMy exp is: ", end = "")
+            print(self.exp)
+            print("I am wearing: ", end = "")
+            #self.getFit()
+            print()
+        else:
+            petdata = open(filename, 'r')
+            print(petdata.readline())
     def gainExp(self, expAmount):
         self.exp = self.exp + (expAmount*2)
         self.check_level()
@@ -112,14 +118,18 @@ class grasstype(Pet):
         self.hat = False
         self.shirt = True
         self.maxLevel = 3
-    def petIntro(self):
-        print("Hello! My name is " + self.name + ". I am a level ", end = "")
-        print(self.level, end = "") 
-        print("! I am a GRASSTYPE! Excited to join the fun <3\nMy exp is: ", end = "")
-        print(self.exp)
-        print("I am wearing: ", end = "")
-        self.getFit()
-        print()
+    def petIntro(self, filename = None):
+        if filename is None:
+            print("Hello! My name is " + self.name + ". I am a level ", end = "")
+            print(self.level, end = "") 
+            print("! I am a GRASSTYPE! Excited to join the fun <3\nMy exp is: ", end = "")
+            print(self.exp)
+            print("I am wearing: ", end = "")
+            #self.getFit()
+            print()
+        else:
+            petdata = open(filename, 'r')
+            print(petdata.readline())
     def gainExp(self, expAmount):
         self.exp = self.exp + (expAmount*1)
         self.check_level()
