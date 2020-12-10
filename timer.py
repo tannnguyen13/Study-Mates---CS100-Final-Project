@@ -27,11 +27,11 @@ class Timer:
 
             for i in range(0, 3) :
                 self.timer(int(sessionTime))
-                print("Time for a break..")
+                print("  Time for a break..\n=====================")
                 self.timer(breakTime)
                 sessionTime = tempStudyTime
                 totalStudyTime += tempStudyTime
-                print("Back to studying!")
+                print("  Back to studying!\n=====================")
                 i += 1
 
             self.timer(int(sessionTime))     #calling study timer one last time (4)
