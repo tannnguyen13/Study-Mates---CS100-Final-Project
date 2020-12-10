@@ -69,7 +69,11 @@
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application
+ >   - Download all the .py files excluding interface.py
+ >       - To run test_timer.py run "pip install mock" in the terminal
+ >   - Make sure "user1.txt" is empty
+ >   - Run program using "python main.py" or "python3 main.py"
+ 
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
