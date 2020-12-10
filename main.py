@@ -4,6 +4,7 @@
 #from timer import timer
 from fileeditor import *
 from timer import *
+from customizer import *
 from menu import *
 import subprocess
 from pet import *
@@ -16,11 +17,14 @@ if __name__ == "__main__":
         # user1 = open("user1.txt","a")
         total = 0
         menu_choice = "1"
+        p = Concrete_Pet()
         me = Pet()
         name = input(" Enter your name: ")
         openf.addName(name)
     else:
         menu_choice = "1"
+        p = Concrete_Pet()
+        p = openf.get_customizer()
         if openf.check_pet() != False:
             me = openf.get_pet()
         else:
@@ -57,7 +61,7 @@ if __name__ == "__main__":
                 else:
                     print("\nInvalid Input! Please pick a type from the list.")
                     print("Going back to the main menu...\n")
-                    
+
                 '''
                 if (type.lower() != "water") or (type.lower() != "fire") or (type.lower() != "grass"):
                     print("\nInvalid Input! Please pick a type from the list.")
@@ -96,9 +100,9 @@ if __name__ == "__main__":
             print(total, "minutes \n")
         if menu_choice == "3":
             me.petIntro()
+            print('Fit: ', '\n', p.get_pants(), '\n',  p.get_shirt(), '\n',  p.get_hat())
         if menu_choice == "4":
-            import customizer
-            customizer.main()
+            main(p, me, openf)
         if menu_choice == "5":
             print("Goodbye!")
         if menu_choice != "1" and menu_choice !="2" and menu_choice !="3" and menu_choice !="4" and menu_choice !="5":
