@@ -2,7 +2,6 @@
 # currently only on terminal, need to figure out how to add visual for each
 # also need to discuss more specifics (exp, incrementing exp, clothing for each)
 
-
 class Pet:
     def __init__(self):
         self.name = "Default"
@@ -38,7 +37,6 @@ class Pet:
             return True
         else:
             return False
-
 
 class firetype(Pet):
     def __init__(self):
