@@ -36,9 +36,9 @@
  >     * Each character stems from a “character” abstract class and we want to implement the ability to earn points to customize each character’s clothing. With the decorator design pattern, we will be able to create a decorator object (Customizer) under the Character class that will help us easily update the user’s character (monster) without affecting the appearance of the other characters. The Customizer object will be extended to different clothing types (hat, shirt, pants, etc). 
 
  > ## Phase II
- <img src="project omt diagram-strategy.jpg">
+ <img src="project omt diagram-strategy.png">
  <img src="diagram 2-abstract.png">
- <img src="Decorator Diagram.jpg">
+ <img src="Decorator Diagram.png">
  
  > In addition to completing the "Class Diagram" section below, you will need to 
  > * Set up your GitHub project board as a Kanban board for the project. It should have columns that map roughly to 
