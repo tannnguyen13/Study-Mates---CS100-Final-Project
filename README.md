@@ -76,11 +76,11 @@
  <img src="cusotmize_gradCap.png">
  <img src="customize_rename.png">
  <img src="quit.png">
- ## Installation/Usage
+ > ## Installation/Usage
  >   - Download all the .py files excluding interface.py
- >       - To be able to run test_timer.py, you have to install the "mock" module (pip install mock)
+ >   - To be able to run test_timer.py, you have to install the "mock" module (pip install mock)
  >   - Make sure "user1.txt" is empty before running
- >   - Run program using "python main.py" (Eindows) or "python3 main.py" (Mac)
+ >   - Run program using "python main.py" (Windows) or "python3 main.py" (Mac)
  
  ## Testing
  > We used the imported python library, "unittest", and created files for each test: "test_timer.py", "test_pet.py", and "test_customizer.py". From each files' names, you can see that we tested for timer, pet, and the customizer. For the file saving, we looked at the file and saw if the program was writing to the file correctly. 
