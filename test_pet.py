@@ -69,12 +69,49 @@ class TestPet(TestCase):
         p.gainExp(25)
         currentLevel = p.getLevel()
         currentExp = p.getExp()
-        self.assertEqual(currentExp, 50)
-        self.assertEqual(currentLevel, 1)
+        self.assertEqual(currentExp, 0)
+        self.assertEqual(currentLevel, 2)
 
         p.gainExp(75)
         currentLevel = p.getLevel()
         isMax = p.check_max_level()
-        self.assertEqual(currentExp, 50)
+        self.assertEqual(currentExp, 0)
+        self.assertEqual(currentLevel, 5)
+        self.assertEqual(isMax, True)
+    
+    def test_pet_levelWater(self):
+        p = watertype()
+        #currentLevel = p.getLevel()
+        #currentExp = p.getExp()
+        self.assertEqual(p.exp, 0)
+        self.assertEqual(p.level, 1)
+
+        p.gainExp(32)
+        currentLevel = p.getLevel()
+        currentExp = p.getExp()
+        self.assertEqual(currentExp, 8)
+        self.assertEqual(currentLevel, 2)
+
+        p.gainExp(53)
+        currentLevel = p.getLevel()
+        isMax = p.check_max_level()
+        self.assertEqual(currentExp, 8)
         self.assertEqual(currentLevel, 4)
-        self.assertEqual(isMax, False)
+        self.assertEqual(isMax, True)
+
+    def test_pet_levelGrass(self):
+        p = grasstype()
+        #currentLevel = p.getLevel()
+        #currentExp = p.getExp()
+        self.assertEqual(p.exp, 0)
+        self.assertEqual(p.level, 1)
+
+        p.gainExp(2)
+        self.assertEqual(p.exp, 0)
+        self.assertEqual(p.level, 2)
+
+        p.gainExp(3)
+        isMax = p.check_max_level()
+        self.assertEqual(p.exp, 1)
+        self.assertEqual(p.level, 3)
+        self.assertEqual(isMax, True)
