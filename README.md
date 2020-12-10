@@ -68,6 +68,14 @@
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
  ## Screenshots
  > Screenshots of the input/output after running your application
+ <img src="main_menu.png">
+ <img src="Pet_choice.png">
+ <img src="Total_time.png">
+ <img src="customize_tshirt.png">
+ <img src="customize_shorts.png">
+ <img src="customize_gradCap.png">
+ <img src="customize_rename.png">
+ <img src="quit.png">
  ## Installation/Usage
  >   - Download all the .py files excluding interface.py
  >       - To be able to run test_timer.py, you have to install the "mock" module (pip install mock)
