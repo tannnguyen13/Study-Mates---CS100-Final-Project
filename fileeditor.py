@@ -6,6 +6,10 @@ class File:
         self.nameIndex = 0
         self.totalIndex = 1
         self.numofpets = 2
+        self.petname = 3
+        self.pettype = 4
+        self.petlevel = 5
+        self.petexp = 6
         
     def checkFile(self, name):
         return os.stat(name).st_size == 0
@@ -29,6 +33,14 @@ class File:
         with open("user1.txt",'w') as file:
             file.writelines(data)
 
+    def update_pet(self, temp):
+        with open("user1.txt",'r') as file:
+            data = file.readlines()
+        data[self.petlevel] = (str(temp.level)+'\n')
+        data[self.petexp] = (str(temp.exp)+'\n')
+        with open("user1.txt", 'w') as file:
+            file.writelines(data)
+
     def update_total(self, total):
         with open("user1.txt",'r') as file:
             data = file.readlines()
@@ -43,12 +55,20 @@ class File:
 
     def get_pet(self):
         pet = Pet()
-        if checkFile("user1.txt") == True:
+        if self.checkFile("user1.txt") == False:
             with open("user1.txt",'r') as file:
                 data = file.readlines()
             if data[self.numofpets] != "0":
-                pet = pet.set_type(data[4])
-                pet.changeName(data[3])
-                pet.gainExp(data[6])
-                pet.level = data[5]
+                pet = set_type(pet, (str(data[4]).rstrip('\n')))
+                pet.changeName(data[3].rstrip('\n'))
+                pet.exp = (int(data[6]))
+                pet.level = int(data[5])
                 return pet
+
+    def check_pet(self):
+        with open("user1.txt",'r') as file:
+                data = file.readlines()
+        if data[self.numofpets] != "0\n":
+            return True
+        else:
+            return False
