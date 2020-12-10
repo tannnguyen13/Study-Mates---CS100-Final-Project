@@ -76,9 +76,9 @@
  <img src="customize_gradCap.png">
  <img src="customize_rename.png">
  <img src="quit.png">
- ## Installation/Usage
+ > ## Installation/Usage
  >   - Download all the .py files excluding interface.py
- >       - To be able to run test_timer.py, you have to install the "mock" module (pip install mock)
+ >   - To be able to run test_timer.py, you have to install the "mock" module (pip install mock)
  >   - Make sure "user1.txt" is empty before running
  >   - Run program using "python main.py" (Eindows) or "python3 main.py" (Mac)
  
