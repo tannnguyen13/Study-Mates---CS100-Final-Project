@@ -35,7 +35,31 @@ if __name__ == "__main__":
         if menu_choice == "1":
             if openf.check_pet() == False:
                 type = input("Pick your pet type! (Fire🔥), (Water🌊), (Grass🍃) \n")
-                if type.lower() != ("water" or "fire" or "grass") :
+                if type.lower() == "water" or type.lower() == "fire" or type.lower() == "grass":
+                    me = set_type(me, type)
+                    
+                    name = input("What do you want to name your pet? \n")
+                    me.changeName(name)
+                    me.petIntro()
+                    
+                    time = Timer()
+                    time.run_timer()
+                    
+                    total += time.return_total_time()
+                    openf.update_total(time.return_total_time())
+                    me.gainExp(time.return_total_time())
+
+                    openf.addPet(me, type)
+                    
+                    me.petIntro()
+                    if me.check_max_level() == True:
+                        print("Congratulations! I have reached my max level! 😇🙏🏼")
+                else:
+                    print("\nInvalid Input! Please pick a type from the list.")
+                    print("Going back to the main menu...\n")
+                    
+                '''
+                if (type.lower() != "water") or (type.lower() != "fire") or (type.lower() != "grass"):
                     print("\nInvalid Input! Please pick a type from the list.")
                     print("Going back to the main menu...\n")
                 else:
@@ -57,11 +81,12 @@ if __name__ == "__main__":
                     me.petIntro()
                     if me.check_max_level() == True:
                         print("Congratulations! I have reached my max level! 😇🙏🏼")
+                    '''
             else:
                     time = Timer()
                     time.run_timer()
                     total += time.return_total_time()
-                    openf.update_total(total)
+                    openf.update_total(time.return_total_time())
                     me.gainExp(time.return_total_time())
                     # updates the pet in the txt file
                     openf.update_pet(me)
