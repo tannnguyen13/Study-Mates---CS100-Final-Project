@@ -30,7 +30,7 @@ class TestCustomizer(unittest.TestCase):
         p = Concrete_Pet()
         p = Jeans(p)
 
-        self.assertEqual(p.get_pants(), "Pants: Jeans 👖�")
+        self.assertEqual(p.get_pants(), "Pants: Jeans 👖")
         self.assertEqual(p.get_shirt(), "Shirt: ")
         self.assertEqual(p.get_hat(), "Hat: ")
     
