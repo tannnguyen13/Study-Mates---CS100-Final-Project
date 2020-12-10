@@ -172,6 +172,7 @@ def main(p, p1, openf):
             openf.update_pet(p1)
         if change == "5":
             print("Returning to menu...")
+            return p
         if change != "1" and change !="2" and change !="3" and change !="4" and change !="5":
             print("\nInvalid Input! Pick a choice listed in the menu.\n")
 

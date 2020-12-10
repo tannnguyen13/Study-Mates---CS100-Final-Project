@@ -102,7 +102,7 @@ if __name__ == "__main__":
             me.petIntro()
             print('Fit: ', '\n', p.get_pants(), '\n',  p.get_shirt(), '\n',  p.get_hat())
         if menu_choice == "4":
-            main(p, me, openf)
+            p = main(p, me, openf)
         if menu_choice == "5":
             print("Goodbye!")
         if menu_choice != "1" and menu_choice !="2" and menu_choice !="3" and menu_choice !="4" and menu_choice !="5":
