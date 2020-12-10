@@ -67,7 +67,7 @@ class firetype(Pet):
         if self.check_max_level() == False:
             i = self.exp
             l = 0
-            while i > 0 and self.check_max_level() == False:
+            while i >= 0 and self.check_max_level() == False:
                 i = i - 50
                 l = l+1
             self.level = self.level+(l-1)
@@ -97,14 +97,14 @@ class watertype(Pet):
         self.exp = self.exp + (expAmount*1.5)
         self.check_level()
     def check_level(self):
-        while self.check_max_level() == False:
+        if self.check_max_level() == False:
             i = self.exp
             l = 0
-            while i > 0 and self.check_max_level() == False:
-                i = i - 1
+            while i >= 0 and self.check_max_level() == False:
+                i = i - 40
                 l = l+1
             self.level = self.level+(l-1) 
-            self.exp = i+1
+            self.exp = i+40
             if self.check_max_level() == True:
                 self.level = self.maxLevel
 class grasstype(Pet):
@@ -127,17 +127,17 @@ class grasstype(Pet):
             petdata = open(filename, 'r')
             print(petdata.readline())
     def gainExp(self, expAmount):
-        self.exp = self.exp + (expAmount*1)
+        self.exp = self.exp + (expAmount)                 
         self.check_level()
     def check_level(self):
         if self.check_max_level() == False:
-            i = self.exp
-            l = 0
-            while i > 0:
-                i = i - 1
-                l = l+1
-            self.level = self.level+(l-1)
-            self.exp = i+1
+            i = self.exp                                         
+            l = 0                                               
+            while i >= 0 and self.check_max_level() == False:
+                i = i - 2                                  
+                l = l+1                                        
+            self.level = self.level+(l-1)                      
+            self.exp = i+2                                     
             if self.check_max_level() == True:
                 self.level = self.maxLevel
 
