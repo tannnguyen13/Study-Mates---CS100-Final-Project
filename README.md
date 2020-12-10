@@ -1,7 +1,5 @@
 
 # Study Mates!
- > Your author list below should include links to all members GitHub and should begin with a "\<" (remove existing author).
- 
  > Authors: \<[Tann Nguyen](https://github.com/tannnguyen13)\> \<[Cindy Do](https://github.com/condoes)\> \<[Gabriela Alvarez](https://github.com/galva041)\>
 
 ## Project Description
@@ -36,9 +34,6 @@
  <img src="diagram 2-abstract.png">
  <img src="Decorator Diagram.png">
 
-## Class Diagram
-
- > ## Phase III
 
  > ## Final deliverable
 
