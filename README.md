@@ -69,7 +69,10 @@
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application
+ >   - Download all files excluding interface.py (customizer.py, fileeditor.py, main.py, menu.py, pet.py, testcustomizer.py, test_pet.py, test_timer.py, timer.py, user1.txt)
+ >   - Make sure the "user1.txt" file is empty
+ >   - Run "python main.py" in terminal to run
+ >        - if on mac use "python3 main.py"
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
