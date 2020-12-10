@@ -1,3 +1,4 @@
+from fileeditor import *
 from pet import Pet
 from menu import *
 
@@ -112,13 +113,12 @@ class GradCap(PetDecorator):
         PetDecorator.__init__(self,decorated_pet)
     def set_hat(self):
         return "Graduation Cap 🎓"
-    def get_shirt(self):
+    def get_hat(self):
        return "Hat: " + self.set_hat() 
 
 
 
-def main(): 
-    p = Concrete_Pet()
+def main(p, p1, openf):
     change = "1"
     while change != "5":
         CustomMenu()
@@ -135,6 +135,9 @@ def main():
             if option != "1" and option !="2" and option !="3":
                 print("\nInvalid Input! Pick a choice listed in the menu.\n")
             print('Fit: ', '\n', p.get_pants(), '\n',  p.get_shirt(), '\n',  p.get_hat())
+            openf.updateShirts(p.set_shirt())
+            p1.shirt = True
+
         if change == "2":               #pants
             pantsMenu()
             option = input()
@@ -147,6 +150,8 @@ def main():
             if option != "1" and option !="2" and option !="3":
                 print("\nInvalid Input! Pick a choice listed in the menu.\n")
             print('Fit: ', '\n', p.get_pants(), '\n',  p.get_shirt(), '\n',  p.get_hat())
+            openf.updatePants(p.set_pants())
+            p1.pants = True
         if change == "3":               #hat
             hatMenu()
             option = input()
@@ -159,8 +164,15 @@ def main():
             if option != "1" and option !="2" and option !="3":
                 print("\nInvalid Input! Pick a choice listed in the menu.\n")
             print('Fit: ', '\n', p.get_pants(), '\n',  p.get_shirt(), '\n',  p.get_hat())
+            openf.updateHats(p.set_hat())
+            p1.hat = True
+        if change == '4':
+            name = input("What would you like to rename your pet to?")
+            p1.changeName(name)
+            openf.update_pet(p1)
         if change == "5":
             print("Returning to menu...")
+            return p
         if change != "1" and change !="2" and change !="3" and change !="4" and change !="5":
             print("\nInvalid Input! Pick a choice listed in the menu.\n")
 
