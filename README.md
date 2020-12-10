@@ -75,5 +75,5 @@
  >   - Run program using "python main.py" or "python3 main.py"
  
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ > We used the imported python library, "unittest", and created files for each test: "test_timer.py", "test_pet.py", and "test_customizer.py". From each files' names, you can see that we tested for timer, pet, and the customizer. For the file saving, we looked at the file and saw if the program was writing to the file correctly. 
  
